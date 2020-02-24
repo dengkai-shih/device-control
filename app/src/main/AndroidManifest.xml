@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tw.edu.nsysu.lis.ki.zenbo_dev">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".RobotDevSampleActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.asus.intent.category.ZENBO" />
+                <category android:name="com.asus.intent.category.ZENBO_LAUNCHER" />
+
+                <!-- please comment out the following line when you want to launch to Zenbo App Store -->
+                <!-- See Zenbo Developer Web: Zenbo-SDK-Getting-Started: Important notes on Zenbo APP developing -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- vision activities -->
+        <activity android:name=".VisionActivity"/>
+        <activity android:name="tw.edu.nsysu.lis.ki.zenbo_dev.VisionRequestDetectPerson"/>
+        <activity android:name="tw.edu.nsysu.lis.ki.zenbo_dev.VisionRequestDetectFace" />
+
+        <!-- motion activities -->
+        <activity android:name=".MotionActivity"/>
+        <activity android:name="tw.edu.nsysu.lis.ki.zenbo_dev.MotionMoveBodyHead"/>
+        <activity android:name="tw.edu.nsysu.lis.ki.zenbo_dev.MotionRemoteControlBodyHead"/>
+
+        <!-- robot activities -->
+        <activity android:name=".RobotActivity"/>
+        <activity android:name="tw.edu.nsysu.lis.ki.zenbo_dev.RobotSpeak"/>
+        <activity android:name="tw.edu.nsysu.lis.ki.zenbo_dev.RobotSetExpression"/>
+
+        <!-- utility activities -->
+        <activity android:name=".UtilityActivity"/>
+        <activity android:name="tw.edu.nsysu.lis.ki.zenbo_dev.UtilityPlayAction"/>
+        <activity android:name="tw.edu.nsysu.lis.ki.zenbo_dev.UtilityPlayEmotionalAction"/>
+
+        <!-- wheelLithts activities -->
+        <activity android:name=".WheelLightsActivity"/>
+        <activity android:name="tw.edu.nsysu.lis.ki.zenbo_dev.WheelLightsSetBrightness"/>
+        <activity android:name="tw.edu.nsysu.lis.ki.zenbo_dev.WheelLightsTurnOff"/>
+        <activity android:name="tw.edu.nsysu.lis.ki.zenbo_dev.WheelLightsSetColor"/>
+    </application>
+
+</manifest>
