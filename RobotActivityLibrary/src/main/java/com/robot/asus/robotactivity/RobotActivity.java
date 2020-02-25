@@ -2,7 +2,6 @@ package com.robot.asus.robotactivity;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
 
 import com.asus.robotframework.API.RobotAPI;
 import com.asus.robotframework.API.RobotCallback;
@@ -35,6 +34,7 @@ public class RobotActivity extends Activity{
         super.onResume();
         if(robotListenCallback!= null)
             robotAPI.robot.registerListenCallback(robotListenCallback);
+        /*  隱藏底部功能列
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |
                                         View.SYSTEM_UI_FLAG_FULLSCREEN |
@@ -42,6 +42,7 @@ public class RobotActivity extends Activity{
                                         View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
                                         View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                                         );
+         */
     }
 
     @Override
